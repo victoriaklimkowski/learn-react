@@ -1,6 +1,8 @@
-import { AvatarProps } from "@/types/avatar";
+import { AvatarProps } from "@/types/avatar"; // Defining the object AvatarProps
 
-function Avatar({person, size=100}: AvatarProps) {
+// function Avatar({person, size=100}: AvatarProps) { // An alternative way to write the function
+function Avatar(props: AvatarProps) {
+  const { person, size = 100 } = props;
   return (
     <img
       className="avatar"
@@ -12,6 +14,7 @@ function Avatar({person, size=100}: AvatarProps) {
   );
 }
 
+// Illustrates the resusability of components by using the Avatar component
 export default function Profile() {
   return (
     <div>

@@ -2,7 +2,9 @@ export default function Gallery() {
   return (
     <div>
       <h1>Notable Scientists</h1>
+      {/* TODO: Create bio component to encapsulate the profile information */}
       <section className="profile">
+        {/* TODO: Update to use Avatar component */}
         <h2>Maria Skłodowska-Curie</h2>
         <img
           className="avatar"
