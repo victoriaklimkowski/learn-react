@@ -4,7 +4,7 @@ export default function PersonData() {
     const [fName, setFName] = useState('');
     const [lName, setLName] = useState('');
     const [age, setAge] = useState(0);
-    const [person, setPerson] = useState({fullName: '', age: 0})
+    const [person, setPerson] = useState({fullName: '', age: 0}) // since this is an obj, it will force both to update whenever one does.     
 
     function handleClick() {
         let name = fName + ' ' + lName;

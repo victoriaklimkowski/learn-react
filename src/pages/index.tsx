@@ -7,21 +7,20 @@
 import MyComp  from './qcomps/firstcomp'
 import TodoList from './qcomps/todos'
 import Profile from './components/profile_props'
-import Gallery from './qcomps/gallery_props'
+// import Gallery from './qcomps/gallery_props'
 import Square from './components/square'
 import PackingList from './components/props_item'
+import RecipeList from './qcomps/recipes'
+import List from './qcomps/list_keys_id'
+import Gallery from './qcomps/state'
+import Form from './qcomps/stuckForm'
+import FeedbackForm from './qcomps/thankYouCrash'
+import Counter from './qcomps/snapshot'
 
 export default function Home() {
   return (
     <>
-      <PackingList />
-      <Square />
-      <Gallery />
-      <Profile />
-      <TodoList />
-      <MyComp />
-      {/* <Gallery /> */}
-      {/* <Profile /> */}
+      <Counter />
     </>
   )
 }

@@ -7,10 +7,10 @@ export default function Form() {
   function handleSubmit(e: { preventDefault: () => void; }) {
     e.preventDefault();
     setTimeout(() => {
-      alert(`You said ${message} to ${to}`);
+      alert(`You said ${message} to ${to}`); // React takes a snapshot of the state when the event handler is created, and won't see the updated state because it's referencing the snapshot when it was submitted. 
     }, 5000);
   }
-
+ 
   return (
     <form onSubmit={handleSubmit}>
       <label>
