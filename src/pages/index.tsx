@@ -1,8 +1,8 @@
-import MyComp from "./qcomps/firstcomp";
 import Profile from "./qcomps/profile_mistake";
+import MyComp from "./qcomps/firstcomp";
 import Bio from "./qcomps/bios";
+import Gallery from "./qcomps/gallery_props";
 import PackingList from "./qcomps/props_item";
-// import Bio from "./qcomps/bio";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Bio />
       <MyComp />
       <Profile />
+      <Gallery />
       <PackingList />
     </>
   )

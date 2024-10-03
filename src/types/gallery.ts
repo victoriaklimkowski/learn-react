@@ -3,7 +3,7 @@ interface Scientist {
     imageId: string;
     profession: string;
     awards: string;
-    discovery: string;
+    discovered: string;
 }
 
 export interface GalleryProps {
