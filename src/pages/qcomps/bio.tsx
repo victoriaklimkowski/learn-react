@@ -1,23 +1,26 @@
+import { ListItemProps } from '@/types/listItem';
+import { BioProps } from '@/types/bio';
 import Avatar from './Avatar';
+import List from './artistsRemoveArr';
 
-export default function Bio({person, scientist}: bioProps) {
+function ListItem({ label, content }: ListItemProps) {
+  return (
+    <li>
+      <b>{label}: </b>
+      {content}
+    </li>
+  );
+}
+
+export default function Bio({person, scientist}: BioProps): JSX.Element {
     return (
       <section className="profile">
-        <h2>{bioProps.person.name}</h2>
-        <Avatar person={bioProps.person} size={70} />
+        <h2>{person.name}</h2>
+        <img src={`/images/${person.imageId}.jpg`} alt={person.name} />
         <ul>
-          <li>
-            <b>Profession: </b>
-            {bioProps.profession}
-          </li>
-          <li>
-            <b>Awards: 2 </b>
-            {bioProps.awards}
-          </li>
-          <li>
-            <b>Discovered: </b>
-            {bioProps.discovered}
-          </li>
+          <ListItem label="Profession: " content={scientist.profession} />
+          <ListItem label={`Awards: ${scientist.awards ? scientist.awards.split(',').length : 0} `}/>
+          <ListItem label="Discovered: " content={scientist.discovered} />
         </ul>
       </section>
     )

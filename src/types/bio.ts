@@ -1,6 +1,7 @@
 export interface BioProps {
     person: {name: string, imageId: string}, 
-    profession: string,
-    awards?: string[],
-    discovered?: string
+    scientist: {profession: string, awards?: string, discovered?: string},
+    // profession: string,
+    // awards?: string,
+    // discovered?: string
 }
