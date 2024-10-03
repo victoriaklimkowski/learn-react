@@ -18,19 +18,22 @@ export default function Form() {
   }
 
   return (
-    <form onSubmit={e => e.preventDefault()}>
-      <input
-        placeholder="First name"
-        value={firstName}
-        onChange={handleFirstNameChange}
-      />
-      <input
-        placeholder="Last name"
-        value={lastName}
-        onChange={handleLastNameChange}
-      />
-      <h1>Hi, {firstName} {lastName}</h1>
-      <button onClick={handleReset}>Reset</button>
-    </form>
+    <div>
+      <h1>(Previously) Stuck Form</h1>
+      <form onSubmit={e => e.preventDefault()}>
+        <input
+          placeholder="First name"
+          value={firstName}
+          onChange={handleFirstNameChange}
+        />
+        <input
+          placeholder="Last name"
+          value={lastName}
+          onChange={handleLastNameChange}
+        />
+        <h2>Hi, {firstName} {lastName}</h2>
+        <button onClick={handleReset}>Reset</button>
+      </form>
+    </div>
   );
 }
