@@ -7,6 +7,7 @@ import FeedbackForm from "./qcomps/thankYouCrash";
 export default function Home() {
   return (
     <>
+      {/* React Lists and States Tutorial Lab  */}
       <FeedbackForm />
       <Form />  
       <Gallery />
