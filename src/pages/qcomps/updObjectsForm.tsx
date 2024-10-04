@@ -7,10 +7,28 @@ export default function Scoreboard() {
     likescore: 10,
   });
 
+  // function handlePlusClick() {
+  //   player.likescore++;
+  // }
+
   function handlePlusClick() {
-    player.likescore++;
+    const newPlayer = { ...player, likescore: player.likescore + 1 };
+    setPlayer(newPlayer);
   }
 
+  // function handleFirstNameChange(e: { target: { value: string; }; }) {
+  //   setPlayer({
+  //     ...player,
+  //     firstName: e.target.value,
+  //   });
+  // }
+
+  // function handleFirstNameChange(e: { target: { value: string; }; }) {
+  //   const newPlayer = { ...player, firstName: e.target.value };
+  //   setPlayer(newPlayer);
+  // }
+
+  // Alternative syntax from Prof. 
   function handleFirstNameChange(e: { target: { value: string; }; }) {
     setPlayer({
       ...player,
@@ -19,11 +37,13 @@ export default function Scoreboard() {
   }
 
   function handleLastNameChange(e: { target: { value: string; }; }) {
-    player.lastName = e.target.value;
+    const newPlayer = { ...player, lastName: e.target.value };
+    setPlayer(newPlayer);
   }
 
   return (
     <>
+      <h1>Scoreboard</h1>
       <label>
         Like Score: <b>{player.likescore}</b>
         {'  '}

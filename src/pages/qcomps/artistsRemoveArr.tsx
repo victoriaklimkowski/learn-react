@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// An array of objects where each has an id
 let initialArtists = [
   { id: 0, name: 'Marta Colvin Andrade' },
   { id: 1, name: 'Lamidi Olonade Fakeye'},
@@ -18,9 +19,11 @@ export default function List() {
         {artists.map(artist => (
           <li key={artist.id}>
             {artist.name}{' '}
-            <button onClick={() => {
-              artists.splice(artist.id, 1)
-            }}>
+            <button onClick={() => { 
+              setArtists(
+                artists.filter(a => a.id !== artist.id
+                )
+              );}}>
               Delete
             </button>
           </li>

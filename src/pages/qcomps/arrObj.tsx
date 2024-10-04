@@ -16,10 +16,12 @@ export default function BucketList() {
 
   function handleToggleMyList(artworkId: number, nextSeen: boolean) {
     const tmpList = myList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
-        return e
+      if (e.id === artworkId) {
+        return { ...e, seen: nextSeen }
+          // e.seen = nextSeen 
+          } else {
+          return e
+          }
     });
     setMyList(tmpList);
   }
@@ -27,9 +29,11 @@ export default function BucketList() {
   function handleToggleYourList(artworkId: number, nextSeen: boolean) {
     const tmpList = yourList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
-        return e
+          return { ...e, seen: nextSeen }
+            // e.seen = nextSeen 
+            } else {
+            return e
+            }
     });
     setYourList(tmpList);
   }
@@ -54,7 +58,7 @@ function ItemList({ artworks, onToggle }: ItemListProps) {
     <ul>
       {artworks.map(artwork => (
         <li key={artwork.id}>
-          <label>
+          <label> 
             <input
               type="checkbox"
               checked={artwork.seen}
