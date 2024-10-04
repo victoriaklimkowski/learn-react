@@ -7,7 +7,7 @@ export default function Gallery() {
 
   function handleNextClick() {
     if (index < sculptureList.length - 1) {
-      setIndex(index + 1); // was a bug: doesn't check the index, so it will go out of bounds
+      setIndex(index + 1); // was a bug: didn't check the index, so it would go out of bounds
       return;
     } else {
       setIndex(0);
@@ -23,6 +23,7 @@ export default function Gallery() {
   let sculpture = sculptureList[index];
   return (
     <>
+      <h1>Gallery</h1>
       <button onClick={handleNextClick}>
         Next
       </button>

@@ -36,19 +36,22 @@ export default function FeedbackForm() {
   } else {
     // eslint-disable-next-line
     return (
-      <form onSubmit={e => {
-        e.preventDefault();
-        alert(`Sending: "${message}"`);
-        setIsSent(true);
-      }}>
-        <textarea
-          placeholder="Message"
-          value={message}
-          onChange={e => setMessage(e.target.value)}
-        />
-        <br />
-        <button type="submit">Send</button>
-      </form>
+      <div>
+        <h1>Thank You Crash</h1>
+        <form onSubmit={e => {
+          e.preventDefault();
+          alert(`Sending: "${message}"`);
+          setIsSent(true);
+        }}>
+          <textarea
+            placeholder="Message"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+          />
+          <br />
+          <button type="submit">Send</button>
+        </form>
+      </div>
     );
   }
 }
